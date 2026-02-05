@@ -42,7 +42,11 @@ function RacesList() {
                 <strong>Location:</strong> {race.location}, {race.country}
               </p>
               <p className="race-info">
-                <strong>Date:</strong> {new Date(race.race_date).toLocaleDateString()}
+                <strong>Date:</strong> {new Date(race.race_date).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
               </p>
               <p className="race-info">
                 <strong>Season:</strong> {race.year}
