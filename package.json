@@ -1,0 +1,22 @@
+{
+  "name": "f1-weekends-local",
+  "version": "1.0.0",
+  "description": "Site para listar os fins de semana da Formula 1 com gráficos, dados, resultados e imagens das corridas",
+  "scripts": {
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "install:all": "npm run install:client && npm run install:server",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build:client": "cd client && npm run build",
+    "start:server": "cd server && npm start"
+  },
+  "keywords": [
+    "f1",
+    "formula1",
+    "react",
+    "mariadb"
+  ],
+  "author": "",
+  "license": "ISC"
+}
