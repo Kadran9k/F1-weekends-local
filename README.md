@@ -207,6 +207,46 @@ See `server/database/schema.sql` for the complete schema.
    - Add migration scripts in `server/database/`
    - Update schema.sql for new installations
 
+## 🐳 Docker Deployment
+
+The project includes Docker configuration for easy deployment.
+
+### Using Docker Compose
+
+1. **Build and run all services:**
+   ```bash
+   docker-compose up -d
+   ```
+
+   This will start:
+   - MariaDB database (port 3306)
+   - Backend API (port 5000)
+   - Frontend (port 80)
+
+2. **Stop services:**
+   ```bash
+   docker-compose down
+   ```
+
+3. **View logs:**
+   ```bash
+   docker-compose logs -f
+   ```
+
+### Manual Docker Build
+
+**Build images:**
+```bash
+docker build -t f1-server ./server
+docker build -t f1-client ./client
+```
+
+**Run containers:**
+```bash
+docker run -d -p 5000:5000 f1-server
+docker run -d -p 80:80 f1-client
+```
+
 ## 📝 License
 
 ISC
